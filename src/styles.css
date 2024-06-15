@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: black;
+}
+ 
+/* Custom scrollbar styles */
+.scroll-container::-webkit-scrollbar {
+    width: 0; /* Hide scrollbar */
+    height: 0; /* Hide scrollbar */
+  }
+  
+  .scroll-container:hover::-webkit-scrollbar {
+    width: 12px; /* Adjust scrollbar width on hover */
+    height: 12px; /* Adjust scrollbar height on hover */
+  }
+  
+  .scroll-container::-webkit-scrollbar-track {
+    background: transparent; /* Track background */
+  }
+  
+  .scroll-container:hover::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Track background on hover */
+  }
+  
+  .scroll-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5); /* Thumb background */
+    border-radius: 6px; /* Thumb border radius */
+  }
+  
+  .scroll-container:hover::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.7); /* Thumb background on hover */
+  }
+  

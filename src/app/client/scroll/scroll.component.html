@@ -1,0 +1,24 @@
+<div class="mt-12 w-[910px] ml-[6rem]">
+    <div *ngIf="subTitle">
+      <p class="text-[#AAAAAA] text-xl">{{subTitle}}</p>
+    </div>
+    <div class="flex items-center justify-between">
+      <p *ngIf="mainTitle" class="text-white text-3xl font-semibold">{{mainTitle}}</p>
+      <div class="flex items-center gap-4">
+        <app-button *ngIf="buttonTitle" [title]="buttonTitle" [style]="'text-white border border-[#353535] pl-2 pr-2 pt-1 pb-1 rounded-full hover:bg-[#353535] text-sm'"></app-button>
+        
+        <div class="{{addClass}} w-8 h-8 border border-[#353535] rounded-full flex items-center justify-center opacity-20 hover:bg-[#353535] hover:opacity-100 ">
+          <i class="fa-solid fa-angle-left text-white"></i>
+        </div>
+        
+        <div class="w-8 h-8 border border-[#353535] rounded-full flex items-center justify-center hover:bg-[#353535]">
+          <i class="fa-solid fa-angle-right text-white"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="mb-28 w-[910px] ml-[6rem] overflow-x-auto flex {{scrollClass}}">
+    <ng-content></ng-content>
+  </div>
+  

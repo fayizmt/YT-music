@@ -1,0 +1,13 @@
+<div class="flex flex-col  w-[150px]">
+  <div class="relative">
+    <img [src]="image" alt="" class=" object-cover w-full h-[150px]">
+    <div class="play-button absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition duration-300">
+      <i class="fas fa-play fa-lg"></i>
+    </div>
+  </div>
+  
+  <div class=" overflow-hidden flex flex-col">
+    <p class="text-lg font-medium text-white">{{songName}}</p>
+    <p class="text-sm text-[#B3B3B3]">{{songDesc}}</p>
+  </div>
+</div>
