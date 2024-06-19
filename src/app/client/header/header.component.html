@@ -1,15 +1,16 @@
-<div class="flex items-center ">  
+<!-- <div class="flex items-center ">  
 <div class="logo-container flex items-start">
   <button class="text-white focus:outline-none mt-5 ml-7">
     <img src="assets/menu.png" alt="" class="w-[25px]">
   </button>
   <img src="assets/YTmusic.png"  alt="YouTube Music" class="aspect-ratio-w-6 h-6 ml-5 mt-5">
   <span class="text-xl text-white font-bold mt-5 ml-1 ">Music</span>
-</div>
-<!-- <div search ></div>
-<div><img src="assets/" alt=""></div>
-<div>
-  <button class="bg-purple text-white rounded-full px-3 py-1 mt-5 ml-[29rem]">F</button>
-</div>
-
 </div> -->
+<div class="flex items-center sticky top-0 bg-black z-10">
+  <div search></div>  
+<div class="ml-[20rem] mt-5">
+<i class="fa-solid fa-ellipsis-vertical text-lg ml-12 mr-6" style="color: #ffffff;"></i>
+<app-button [title]="'Sign in'" [style]="'bg-white rounded-full w-16 h-8 text-sm font-medium'"></app-button>
+<app-button  [title]="'logout'" [style]="'bg-white rounded-full w-16 h-8 text-sm font-medium'"></app-button>
+</div>
+</div>

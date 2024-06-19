@@ -1,1 +1,25 @@
-<p>login works!</p>
+<div class="login-container ">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <h2>Login to YouTube Music</h2>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" type="email" class="form-control" />
+        <div *ngIf="loginForm.get('email').invalid && loginForm.get('email').touched">
+          <small class="error">Email is required and must be valid</small>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" formControlName="password" type="password" class="form-control" />
+        <div *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">
+          <small class="error">Password is required</small>
+        </div>
+      </div>
+      
+      <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
+      <a href="signup" class="text-white ml-[8rem]">Are You New?</a>
+    </form>
+  </div>
+  

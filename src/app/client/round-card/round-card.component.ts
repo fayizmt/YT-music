@@ -7,13 +7,13 @@ import { Component,Input,OnInit } from '@angular/core';
 })
 export class RoundCardComponent implements OnInit{
   @Input()
-  image:string=''
+  image:string;
 
    @Input()
-  artistName:string=''
+  artistName:string;
 
    @Input()
-  songDesc:string=''
+  songDesc:string;
 
   ngOnInit(): void {
     

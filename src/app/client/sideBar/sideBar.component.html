@@ -1,5 +1,12 @@
 <div>
-  <app-header></app-header>
+  <div class="flex items-center ">  
+    <div class="logo-container flex items-start">
+      <button class="text-white focus:outline-none mt-5 ml-7">
+        <img src="assets/menu.png" alt="" class="w-[25px]">
+      </button>
+      <img src="assets/YTmusic.png"  alt="YouTube Music" class="aspect-ratio-w-6 h-6 ml-5 mt-5">
+      <span class="text-xl text-white font-bold mt-5 ml-1 ">Music</span>
+    </div>
 </div>
 <div class="flex flex-col gap-2 w-[13rem] h-[11rem] ml-4 mt-6 ">
     <app-button title="Home" [icon]="'fa-solid fa-house text-white fa-lg'" class="bg-transparent w-full h-10 px-4 py-2 rounded-[7px] text-white hover:bg-grey focus:outline-none font-bold">
@@ -9,7 +16,7 @@
     <app-button title="Library" [icon]="'fa-regular fa-file-audio text-white fa-lg'" class="bg-transparent w-full h-10 px-4 py-2 rounded-[7px] text-white hover:bg-grey focus:outline-none font-bold flex gap-4">
     </app-button>
     <hr class="w-50 mt-8 mb-6 mr-3 border-[#292929]">
-    <app-button  [style]="'w-48 h-10 rounded-full bg-[#292929] text-white text-sm font-medium'" [title]="'Sign in'"></app-button>
+    <app-button [url]="'/login'"  [style]="'w-48 h-10 rounded-full bg-[#292929] text-white text-sm font-medium'" [title]="'Sign in'"></app-button>
     <app-button  [style]="'w-48 h-10 rounded-full bg-[#292929] text-white text-sm font-medium'" [title]="'Logout'"></app-button>
   </div>
   
