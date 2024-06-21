@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +14,7 @@ import { ButtonComponent } from './client/button/button.component';
 import { ScrollComponent } from './client/scroll/scroll.component';
 import { MiniCardComponent } from './client/mini-card/mini-card.component';
 import { RoundCardComponent } from './client/round-card/round-card.component';
-import { LoginComponent } from './auth/login/login/login.component';
+import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component'; 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { SignupComponent } from './auth/signup/signup.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

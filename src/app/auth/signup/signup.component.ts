@@ -1,5 +1,7 @@
 import { Component,} from '@angular/core';
 import { FormBuilder,FormGroup,Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserService } from '../auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -11,9 +13,8 @@ export class SignupComponent {
   errorMessage:string='';
 
   constructor(
-    private fb: FormBuilder,
-    // private userService: UserService,
-    // private router: Router
+    private fb: FormBuilder,private auth:UserService,private router:Router
+   
   ) {
     this.signupForm = this.fb.group({
       username: ['', Validators.required],
@@ -24,16 +25,11 @@ export class SignupComponent {
 
   onSubmit(): void {
     if (this.signupForm.valid) {
-    //   this.userService.userSignup(this.signupForm.value).subscribe(
-    //     response => {
-    //       console.log('Signup successful', response);
-    //       this.router.navigate(['/login']);
-    //     },
-    //     error => {
-    //       console.error('Signup failed', error);
-    //       this.errorMessage = 'Signup failed. Please try again.';
-    //     }
-    //   );
+      this.auth.signup(this.signupForm.value).subscribe((res)=>{
+        console.log(res);
+        this.router.navigate(['/login'])
+        
+      })
     }
   }
 }

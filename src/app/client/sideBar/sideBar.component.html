@@ -1,23 +1,19 @@
-<div>
-  <div class="flex items-center ">  
-    <div class="logo-container flex items-start">
-      <button class="text-white focus:outline-none mt-5 ml-7">
-        <img src="assets/menu.png" alt="" class="w-[25px]">
-      </button>
+<div class="flex">
+      <i class="fa-solid fa-bars fa-lg text-white mt-8 ml-7" style="color: #ffffff;"></i>
       <img src="assets/YTmusic.png"  alt="YouTube Music" class="aspect-ratio-w-6 h-6 ml-5 mt-5">
       <span class="text-xl text-white font-bold mt-5 ml-1 ">Music</span>
     </div>
-</div>
 <div class="flex flex-col gap-2 w-[13rem] h-[11rem] ml-4 mt-6 ">
-    <app-button title="Home" [icon]="'fa-solid fa-house text-white fa-lg'" class="bg-transparent w-full h-10 px-4 py-2 rounded-[7px] text-white hover:bg-grey focus:outline-none font-bold">
-    </app-button>
-    <app-button title="Explore" [icon]="'fa-regular fa-compass text-white fa-lg'" class="bg-transparent w-full h-10 px-4 py-2 rounded-[7px] text-white hover:bg-grey focus:outline-none font-bold flex gap-4">
-    </app-button>
-    <app-button title="Library" [icon]="'fa-regular fa-file-audio text-white fa-lg'" class="bg-transparent w-full h-10 px-4 py-2 rounded-[7px] text-white hover:bg-grey focus:outline-none font-bold flex gap-4">
+    <app-button title="Home" [icon]="'fa-solid fa-house text-white fa-lg '" [style]="'w-48 text-white h-12 flex items-center pl-5 gap-6 bg-[#1D1D1D] rounded-lg'"></app-button>
+    <app-button title="Explore" [icon]="'fa-regular fa-compass text-white fa-lg'" [style]="'w-48 text-white h-12 flex items-center pl-5 gap-6 hover:bg-[grey] rounded-lg'"></app-button>
+    <app-button title="Library" [icon]="'fa-regular fa-file-audio text-white fa-lg'" [style]="'w-48 text-white h-12 flex items-center pl-5 gap-6 hover:bg-[grey] rounded-lg'">
     </app-button>
     <hr class="w-50 mt-8 mb-6 mr-3 border-[#292929]">
-    <app-button [url]="'/login'"  [style]="'w-48 h-10 rounded-full bg-[#292929] text-white text-sm font-medium'" [title]="'Sign in'"></app-button>
-    <app-button  [style]="'w-48 h-10 rounded-full bg-[#292929] text-white text-sm font-medium'" [title]="'Logout'"></app-button>
+    <app-button *ngIf="!user" [url]="'/login'"  [style]="'w-48 h-10 rounded-full bg-[#292929] text-white text-sm font-medium'" [title]="'Sign in'"></app-button>
+    <app-button *ngIf="user" [url]="''" [style]="'w-48 h-10 rounded-full bg-[#292929] text-white text-sm font-medium'" [title]="'Add playlist'"></app-button>
+     <div class="w-48 mt-2">
+        <p class="text-[#616161] text-xs">Sign in to create & share playlists, get personalized recommendations, and more.</p>
+    </div>
   </div>
   
 

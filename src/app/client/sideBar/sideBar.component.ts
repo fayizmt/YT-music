@@ -1,4 +1,4 @@
-import {Component, DoCheck} from "@angular/core";
+import {Component,DoCheck} from "@angular/core";
 
 @Component({
     selector: 'side-bar',
@@ -11,6 +11,7 @@ import {Component, DoCheck} from "@angular/core";
     ngDoCheck() {
         this.user=localStorage.getItem('user')
       }
-  }
+    
+}
   
 

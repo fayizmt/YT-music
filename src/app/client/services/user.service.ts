@@ -8,6 +8,11 @@ export class ButtonService {
   constructor(private router: Router) { }
 
   navigateTo(url: string): void {
-    this.router.navigate([url]);  
+    this.router.navigate([url]);
   }
+
+  userLogout(): void {
+    localStorage.clear();
+    this.router.navigate(['']);  
+}
 }
